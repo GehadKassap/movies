@@ -1,0 +1,16 @@
+<div class="row">
+  <div  class="col-md-2" *ngIf = "trendingAll.length == 0">
+    <div class="movie">
+       <h1 class="text-danger">No Results Found </h1>
+    </div>
+  </div>
+  <div  class="col-md-2" *ngFor = "let movie of trendingAll">
+    <div class="movie">
+        <img class="img-fluid rounded" src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" alt="">
+       <h6 class="text-white text-center my-1" >
+         {{movie.title == undefined ? movie.name:movie.title}}
+       </h6>
+    </div>
+  </div>
+</div>
+
